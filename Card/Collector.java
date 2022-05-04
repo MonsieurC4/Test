@@ -13,21 +13,15 @@ public class Collector {
         return cards;
     }
 
-    public List<Card> addCard(Card card){
-        List<Card> cardclone = new ArrayList<>();
-        for(int i = 0; i < cards.size() + 1; i++){
-            cardclone.add(card);
-        }
-        cards = cardclone;
+    public void addCard(Card card){
+        cards.add(card);
+    }
+
+
+    public List<Card> getCards(){
         return cards;
-
     }
+    
+    
 
-    public List<Card> getCards(Card card){
-        List<Card> cardget = new ArrayList<>();
-        for(int j = 0; j < cards.size(); j++){
-            ((Collector) cardget).getCards(card);
-        }
-        return cardget;
-    }
 }
